@@ -23,7 +23,7 @@ class CalculatorPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // Input fields
+
               Row(
                 children: [
                   Expanded(
@@ -51,7 +51,7 @@ class CalculatorPage extends StatelessWidget {
               ),
               const SizedBox(height: 12),
 
-              // Operation buttons
+
               Row(
                 children: [
                   Expanded(
@@ -85,7 +85,7 @@ class CalculatorPage extends StatelessWidget {
               ),
               const SizedBox(height: 16),
 
-              // Result display
+
               BlocBuilder<CalculatorBloc, CalculatorState>(
                 builder: (context, state) {
                   final res = state.result.isEmpty ? '-' : state.result;
@@ -93,10 +93,9 @@ class CalculatorPage extends StatelessWidget {
                 },
               ),
 
-              // Spacer pushes Reset button to bottom
+
               const Spacer(),
 
-              // Reset button full width
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
